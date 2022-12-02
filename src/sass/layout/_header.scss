@@ -2,7 +2,7 @@
   width: 1440px;
   height: 120px;
   background-color: $primaryColor;
-  box-shadow: inset 5em 6em rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0em 6em rgba(0, 0, 0, 0.88);
   display: flex;
 }
 
@@ -51,7 +51,7 @@
   &:hover,
   :focus {
     color: $primaryColor;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color $transitionDuration $transitionTiming;
   }
   &--current {
     font-style: inherit;
@@ -85,6 +85,6 @@
   :focus {
     color: $primaryColor;
     border-color: $primaryColor;
-    transition: $transition;
+    transition: $transitionBorderColor;
   }
 }

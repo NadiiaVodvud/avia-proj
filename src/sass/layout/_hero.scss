@@ -1,0 +1,46 @@
+// .section {
+// }
+.container__hero {
+  position: relative;
+  width: 1440px;
+  height: 722px;
+  box-shadow: 50px -100px 25px -102px rgba(14, 13, 61, 0.75);
+}
+.dark-bacground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+.map-bacground {
+  margin-left: 50px;
+  z-index: -5;
+}
+.plane-bacground {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+
+.hero__title {
+  margin: 0px 407px 8px 391px;
+  font-family: $mainFontFamily;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+  text-transform: capitalize;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero__text {
+  margin-left: 391px;
+  margin-right: 408px;
+  font-family: $thirdFontFamyly;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
