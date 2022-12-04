@@ -22,3 +22,22 @@ const options = {
 
 flatpickr(tripStart, options);
 flatpickr(tripEnd, options);
+
+const checkBox = document.querySelector('.booking__form--checkbox-input');
+const checkBoxItem = document.querySelector('.booking__form--checkbox-item');
+
+console.log(checkBox);
+console.log(checkBoxItem);
+
+checkBox.addEventListener('input', onCheckInput);
+
+function onCheckInput(e) {
+  // if (checkBox.checked == true) {
+  //   // return checkBoxItem.classList.add('.bg-primary');
+  //   checkBoxItem.style.bacgroundColor = '$primaryColor';
+  // }
+  // checkBoxItem.classList.remove('.bg-primary');
+  // console.log(e.target);
+  // console.log(e.currentTarget);
+  // console.log(e.target.value);
+}
