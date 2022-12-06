@@ -7,7 +7,7 @@ const tripEnd = document.querySelector('#check-out');
 
 const options = {
   enableTime: true,
-  time_24hr: true,
+  // time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
@@ -24,20 +24,17 @@ flatpickr(tripStart, options);
 flatpickr(tripEnd, options);
 
 const checkBox = document.querySelector('.booking__form--checkbox-input');
-const checkBoxItem = document.querySelector('.booking__form--checkbox-item');
-
+const infoInput = document.querySelector('.booking-info__input');
 console.log(checkBox);
-console.log(checkBoxItem);
 
 checkBox.addEventListener('input', onCheckInput);
 
 function onCheckInput(e) {
-  // if (checkBox.checked == true) {
-  //   // return checkBoxItem.classList.add('.bg-primary');
-  //   checkBoxItem.style.bacgroundColor = '$primaryColor';
-  // }
-  // checkBoxItem.classList.remove('.bg-primary');
-  // console.log(e.target);
-  // console.log(e.currentTarget);
-  // console.log(e.target.value);
+  if (checkBox.checked === true) {
+    return infoInput.classList.remove('visually-hidden');
+  }
+  infoInput.classList.add('visually-hidden');
+  console.log(e.target);
+  console.log(e.currentTarget);
+  console.log(e.target.value);
 }

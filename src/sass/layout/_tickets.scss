@@ -1,0 +1,41 @@
+.container__tickets {
+  height: 665px;
+  background-color: $thirdColor;
+  padding: 50px 165px;
+}
+.tickets__wraper {
+  width: 1110px;
+  height: 565px;
+
+  display: flex;
+}
+.tickets__text-box {
+  width: 496px;
+  height: 523px;
+  margin: 21px 100px 21px 0px;
+}
+.tickets__title {
+  font-family: $mainFontFamily;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+  text-transform: capitalize;
+  color: $secondaryColor;
+  margin-bottom: 16px;
+}
+.tickets__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 24px;
+}
+.tickets__picture {
+}
+.tickets__slider-box {
+  width: 514px;
+  height: 565px;
+}
+.tickets__slider-img {
+}
