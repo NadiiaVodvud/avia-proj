@@ -1,7 +1,7 @@
 .container__subscribe {
-  height: 400px;
+  height: 430px;
   background: rgba(49, 62, 247, 0.05);
-  padding: 100px 453px 70px 453px;
+  padding: 100px 453px 100px 453px;
 }
 .subscribe__title {
   font-family: $mainFontFamily;
@@ -15,9 +15,13 @@
   margin-bottom: 40px;
 }
 .subscribe__form {
+  width: 493px;
+  height: 70px;
+  display: flex;
+  position: relative;
 }
 .subscribe__input {
-  // width: 493px;
+  width: 493px;
   height: 70px;
   font-family: $secondaryFontFamily;
   font-weight: 400;
@@ -25,12 +29,15 @@
   line-height: 1.2;
   color: #aeb5bf;
   opacity: 0.9;
-  padding: 11px 11px 11px 20px;
+  padding: 11px 154px 11px 20px;
   background: $secondaryColor;
   box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
   border-radius: 150px;
   border-color: transparent;
   align-items: center;
+  &:placeholder-shown {
+    outline-color: #92959a;
+  }
 }
 .subscribe__btn {
   width: 132px;
@@ -45,4 +52,8 @@
   text-align: center;
   background-color: $primaryColor;
   color: $secondaryColor;
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  z-index: 1;
 }

@@ -25,7 +25,9 @@ flatpickr(tripEnd, options);
 
 const checkBox = document.querySelector('.booking__form--checkbox-input');
 const infoInput = document.querySelector('.booking-info__input');
+const bookingInfoBtn = document.querySelector('.booking-info__button');
 console.log(checkBox);
+console.log(bookingInfoBtn);
 
 checkBox.addEventListener('input', onCheckInput);
 
@@ -38,3 +40,12 @@ function onCheckInput(e) {
   console.log(e.currentTarget);
   console.log(e.target.value);
 }
+
+// bookingInfoBtn.addEventListener('click', onBookingBtnClick);
+
+// function onBookingBtnClick(e) {
+//   // array.forEach(element => {
+
+//   // });
+//   return infoInput.classList.remove('visually-hidden');
+// }
