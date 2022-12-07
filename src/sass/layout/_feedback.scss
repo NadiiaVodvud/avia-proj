@@ -1,0 +1,110 @@
+.container__feedback {
+  height: 606px;
+  background-color: $secondaryColor;
+  padding: 0px 120px 100px 120px;
+}
+.feedback__pre-title {
+  font-family: $mainFontFamily;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $primaryColor;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.feesback__title {
+  font-family: $mainFontFamily;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+  text-transform: capitalize;
+  text-align: center;
+  color: $thirdTextColor;
+  margin-bottom: 60px;
+}
+.feedback__thumb {
+  height: 354px;
+  display: flex;
+}
+.feedback__map-box {
+  position: relative;
+  width: 678px;
+  height: 320px;
+  margin: 17px 21px 17px 0px;
+}
+.feedback__picture {
+  z-index: -1;
+}
+.feedback__customer {
+  position: absolute;
+  //   &:hover,
+  //   &:focus {
+  //     transform: scale(1, 1);
+  //   }
+}
+.feedback__customer--first {
+  left: 110px;
+  top: 46px;
+}
+.feedback__customer--second {
+  left: 160px;
+  top: 165px;
+}
+.feedback__customer--third {
+  left: 300px;
+  top: 30px;
+}
+.feedback__customer--forth {
+  left: 335px;
+  top: 180px;
+}
+.feedback__customer--fifth {
+  left: 485px;
+  top: 115px;
+}
+.feedback__customer--sixth {
+  left: 530px;
+  top: 35px;
+}
+.feedback__customer--seventh {
+  left: 540px;
+  top: 230px;
+}
+.feedback_slider-box {
+  width: 500px;
+  height: 354px;
+}
+.feedback__slider {
+  height: 272px;
+  padding: 30px 21px;
+  box-shadow: 0px 100px 200px rgba(1, 23, 54, 0.1);
+  border-radius: 20px;
+}
+.feedback__slider--top-box {
+  display: flex;
+  margin-bottom: 16px;
+}
+.feedback__photo--slide-one {
+  margin-right: 16px;
+}
+.feedback__text--top {
+  font-family: $mainFontFamily;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $thirdTextColor;
+  opacity: 0.9;
+  padding: 7px 0px;
+}
+.feedback__text {
+  margin-bottom: 8px;
+}
+.feedback__descroption {
+  font-family: $mainFontFamily;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.89;
+  color: #1b1b1c;
+}

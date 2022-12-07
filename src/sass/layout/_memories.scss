@@ -1,0 +1,30 @@
+.container__memeories {
+  height: 640px;
+  padding: 0px 120px 100px 120px;
+  background-color: $secondaryColor;
+}
+.memories__title {
+  font-family: $mainFontFamily;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.015em;
+  text-transform: capitalize;
+  color: $thirdTextColor;
+  margin-bottom: 40px;
+}
+.memories__list {
+  height: 440px;
+  display: inline-flex;
+}
+.memories__item:not(:last-of-type) {
+  margin-right: 50px;
+}
+
+.memories__item--up {
+  padding-bottom: 50px;
+}
+.memories__item--down {
+  padding-top: 50px;
+}
