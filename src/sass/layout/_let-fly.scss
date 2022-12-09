@@ -74,6 +74,15 @@
     color: #e5e7eb;
     display: inline-block;
   }
+  //   &::after {
+  //   content: '';
+  //   width: 100px;
+  //   height: 1px;
+  //   background-color: rgba(157, 164, 189, 0.12);
+  //   flex-grow: 1;
+  //   margin-left: 12px;
+  //   margin-right: 12px;
+  // }
 }
 .let-fly__text {
   font-weight: 700;
