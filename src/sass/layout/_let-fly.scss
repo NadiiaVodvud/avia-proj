@@ -61,28 +61,32 @@
   height: 456px;
 }
 .let-fly__title {
+  position: relative;
   font-family: $mainFontFamily;
   font-weight: 900;
   font-size: 20px;
   line-height: 1.2;
   color: $primaryColor;
   margin-bottom: 16px;
-  &::after {
-    content: '-------------------------------------------------------';
-    padding-left: 15px;
-    height: 2px;
-    color: #e5e7eb;
-    display: inline-block;
-  }
-  //   &::after {
-  //   content: '';
-  //   width: 100px;
-  //   height: 1px;
-  //   background-color: rgba(157, 164, 189, 0.12);
-  //   flex-grow: 1;
-  //   margin-left: 12px;
-  //   margin-right: 12px;
+  // &::after {
+  //   content: '-------------------------------------------------------';
+  //   padding-left: 15px;
+  //   height: 2px;
+  //   color: #e5e7eb;
+  //   display: inline-block;
   // }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    width: 483px;
+    height: 0px;
+    border: 1px dashed #e5e7eb;
+    flex-grow: 1;
+    margin-left: 15px;
+    // transform: rotate(-90deg) translateY(100%);
+    // transform-origin: bottom left;
+  }
 }
 .let-fly__text {
   font-weight: 700;
@@ -90,6 +94,7 @@
   line-height: 1.4;
   color: #030303;
   margin-bottom: 40px;
+  letter-spacing: 1.1px;
 }
 .let-fly__list {
   margin-left: 20px;
@@ -110,6 +115,17 @@
 
   &:not(:last-child) {
     margin-bottom: 10px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 19.5px;
+      width: 0;
+      height: 100%;
+      border: 1px dashed #e5e7eb;
+      // flex-grow: 1;
+    }
   }
 }
 
