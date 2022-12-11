@@ -105,4 +105,9 @@
   margin: 0px auto;
   border-radius: 50%;
   background-color: $primaryTextColor;
+  &:hover,
+  &:focus {
+    background-color: $primaryColor;
+    border-color: transparent;
+  }
 }
