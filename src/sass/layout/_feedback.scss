@@ -38,10 +38,10 @@
 }
 .feedback__customer {
   position: absolute;
-  //   &:hover,
-  //   &:focus {
-  //     transform: scale(1, 1);
-  //   }
+  // &:hover,
+  // &:focus {
+  //   transform: scale(1, 1);
+  // }
 }
 .feedback__customer--first {
   left: 110px;
@@ -78,11 +78,6 @@
   color: $secondaryColor;
   border-radius: 20px;
 }
-// sliger-box content
-// .swiper-wrapper {
-//   width: 500px;
-//   height: 271px;
-// }
 
 .feedback__slider.swiper-slide {
   height: 272px;
