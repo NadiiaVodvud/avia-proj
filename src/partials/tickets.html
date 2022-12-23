@@ -16,9 +16,11 @@
         />
       </div>
       <div class="tickets__slider-box">
-        <!-- <div class="stacked-cards example">
-          <ul>
-            <li>
+        <div class="tickets__swiper swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
               <img
                 src="./images/ticket-economy.png"
                 alt="Fly tickets slide"
@@ -26,35 +28,50 @@
                 width="390"
                 height="505"
               />
-            </li>
-            <li>
+            </div>
+            <div class="swiper-slide">
               <img
-                src="./images/ticket-economy.png"
+                src="./images/ticket-business.png"
                 alt="Fly tickets slide"
                 class="tickets__slider-img"
                 width="390"
                 height="505"
               />
-            </li>
-            <li>
+            </div>
+            <div class="swiper-slide">
               <img
-                src="./images/ticket-economy.png"
+                src="./images/ticket-first.png"
                 alt="Fly tickets slide"
                 class="tickets__slider-img"
                 width="390"
                 height="505"
               />
-            </li>
+            </div>
             ...
-          </ul>
-        </div> -->
-        <img
-          src="./images/ticket-economy.png"
-          alt="Fly tickets slide"
-          class="tickets__slider-img"
-          width="390"
-          height="505"
-        />
+          </div>
+        </div>
+        <div class="tickets__slider-nav">
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <span class="tickets__separator">_ _ _ _ _ _ _ _ _ _ _</span>
+          <div class="tickets__slider-btn">
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+              <button type="button" class="tickets__swip-btn">
+                <svg class="tickets__swiper-icon" width="30" height="30">
+                  <use href="./images/symbol-defs.svg#icon-left"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="swiper-button-next">
+              <button type="button" class="tickets__swip-btn">
+                <svg class="tickets__swiper-icon" width="30" height="30">
+                  <use href="./images/symbol-defs.svg#icon-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

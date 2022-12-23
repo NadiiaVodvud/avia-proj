@@ -1,47 +1,60 @@
-.backdrop {
-  background-color: #aeb5bf6a;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  // overflow-y: scroll;
-  // overflow: hidden;
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+.buy__title {
+  font-family: $mainFontFamily;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $primaryColor;
+  margin-bottom: 16px;
+  margin: 50px 30px 30px;
+  text-align: center;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: $secondaryColor;
-  border-radius: 30px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  width: 500px;
-  height: 600px;
+.buy__ticket {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.close-modal {
-  position: absolute;
-  right: 20;
-  width: 70px;
-  height: 30px;
-  background-color: $primaryColor;
-  border-radius: 50;
-  border: transparent;
+.buy__label {
+  font-family: $mainFontFamily;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.89;
+  color: #1b1b1c;
+  margin-bottom: 20px;
+}
+.buy__input,
+.buy__textarea,
+.buy__btn {
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+
+.buy__input {
+  border-color: rgba(105, 102, 102, 0.542);
+  width: 300px;
+  height: 40px;
+  margin-left: 10px;
+}
+.buy__textarea {
+  margin-left: 10px;
+  height: 40px;
+}
+.buy__btn {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1b1b1c;
+  width: 100px;
+  background: rgba(49, 62, 247, 0.1);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  border-color: transparent;
   &:hover,
   &:focus {
-    background-color: $secondaryTextColor;
     color: $secondaryColor;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: $primaryColor;
   }
+  margin: 0 auto;
 }

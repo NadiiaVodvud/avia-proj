@@ -1,52 +1,43 @@
-const refs = {
-  openModalBtn: document.querySelector('[data-modal-open-booking]'),
-  closeModalBtn: document.querySelector('[data-modal-close]'),
-  modal: document.querySelector('[data-modal]'),
-};
+import throttle from 'lodash.throttle';
 
-refs.openModalBtn.addEventListener('click', toggleModal);
-refs.closeModalBtn.addEventListener('click', toggleModal);
+const form = document.querySelector('.form');
+const STORAGE_KEY = 'form-state';
+let formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 
-function toggleModal() {
-  refs.modal.classList.toggle('is-hidden');
+fillFormTextarea();
+
+form.addEventListener('submit', onFormSubmit);
+form.addEventListener('input', throttle(onFormInput, 500));
+
+function onFormInput(e) {
+  formData[e.target.name] = e.target.value.trim();
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
-// ------------------
-// function getRefs() {
-//   return {
-//     buttonOpenModal: document.querySelector('.modal-open'),
-//     buttonCloseModal: document.querySelector('.close-modal'),
-//     backdrop: document.querySelector('.backdrop'),
-//   };
-// }
-// const refs = getRefs();
-// refs.buttonOpenModal.addEventListener('click', onOpenModalClick);
-// refs.buttonCloseModal.addEventListener('click', onCloseModalClick);
-// refs.backdrop.addEventListener('click', onBackdropClick);
-// function onOpenModalClick(e) {
-//   openModal();
-// }
-// function openModal() {
-//   console.dir(refs.backdrop);
-//   refs.backdrop.classList.remove('is-hidden');
-//   window.addEventListener('keydown', onEscapeClick);
-// }
-// function closeModal() {
-//   refs.backdrop.classList.add('is-hidden');
-//   window.removeEventListener('keydown', onEscapeClick);
-// }
-// function onCloseModalClick(e) {
-//   closeModal();
-// }
-// function onBackdropClick(e) {
-//   if (e.target === e.currentTarget) {
-//     closeModal();
-//   }
-//   //   console.log(e.target);
-//   //   console.log(e.currentTarget);
-// }
-// function onEscapeClick(e) {
-//   if (e.code === 'Escape') {
-//     closeModal();
-//   }
-// }
+function onFormSubmit(e) {
+  e.preventDefault();
+
+  const { email, message } = e.currentTarget.elements;
+  // console.log(e.currentTarget.elements);
+
+  if (email.value === '' || message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
+
+  e.currentTarget.reset();
+
+  console.log(formData);
+  formData = {};
+
+  localStorage.removeItem(STORAGE_KEY);
+}
+
+function fillFormTextarea() {
+  const saveMessage = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+  if (saveMessage) {
+    form.email.value = saveMessage.email || '';
+    form.message.value = saveMessage.message || '';
+  }
+}
