@@ -100,7 +100,8 @@
 .tickets__swiper-icon {
   display: block;
   margin: 0px;
-  color: #011736;
+  fill: $secondaryColor;
+  rotate: -90deg;
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
