@@ -23,11 +23,10 @@ const options = {
 flatpickr(tripStart, options);
 flatpickr(tripEnd, options);
 
+const form = document.querySelector('.booking__form');
 const checkBox = document.querySelector('.booking__form--checkbox-input');
 const infoInput = document.querySelector('.booking-info__input');
 const bookingInfoBtn = document.querySelector('.booking-info__button');
-console.log(checkBox);
-console.log(bookingInfoBtn);
 
 checkBox.addEventListener('input', onCheckInput);
 
@@ -36,9 +35,9 @@ function onCheckInput(e) {
     return infoInput.classList.remove('visually-hidden');
   }
   infoInput.classList.add('visually-hidden');
-  console.log(e.target);
-  console.log(e.currentTarget);
-  console.log(e.target.value);
+  // console.log(e.target);
+  // console.log(e.currentTarget);
+  // console.log(e.target.value);
 }
 
 // bookingInfoBtn.addEventListener('click', onBookingBtnClick);
@@ -49,3 +48,21 @@ function onCheckInput(e) {
 //   // });
 //   return infoInput.classList.remove('visually-hidden');
 // }
+
+// const checkBoxes = document.getElementsByName('booking');
+// const infoInputs = document.getElementsByName('name');
+// const bookingInfoBtns = document.querySelectorAll('[data-modal-open-booking]');
+
+// console.log(form);
+// console.log(checkBoxes);
+// console.log(infoInputs);
+// console.log(bookingInfoBtns);
+
+// // checkBox.addEventListener('input', onCheckInput);
+
+// checkBoxes.forEach(element => {
+//   if (element.checked === true) {
+//     infoInputs.classList.remove('visually-hidden');
+//   }
+//   infoInputs.classList.add('visually-hidden');
+// });

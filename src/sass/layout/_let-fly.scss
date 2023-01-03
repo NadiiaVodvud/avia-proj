@@ -68,13 +68,6 @@
   line-height: 1.2;
   color: $primaryColor;
   margin-bottom: 16px;
-  // &::after {
-  //   content: '-------------------------------------------------------';
-  //   padding-left: 15px;
-  //   height: 2px;
-  //   color: #e5e7eb;
-  //   display: inline-block;
-  // }
   &::after {
     content: '';
     position: absolute;
@@ -84,8 +77,6 @@
     border: 1px dashed #e5e7eb;
     flex-grow: 1;
     margin-left: 15px;
-    // transform: rotate(-90deg) translateY(100%);
-    // transform-origin: bottom left;
   }
 }
 .let-fly__text {
@@ -143,4 +134,11 @@
   background-color: $primaryColor;
   color: #ffffff;
   box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
+  transition: color, box-shadow, $transitionDuration $transitionTiming;
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hoverShadow;
+    color: $primaryTextColor;
+    transition: color, box-shadow, $transitionDuration $transitionTiming;
+  }
 }

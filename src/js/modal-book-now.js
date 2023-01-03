@@ -1,4 +1,5 @@
 import throttle from 'lodash.throttle';
+import { Notify } from 'notiflix';
 
 const form = document.querySelector('.form');
 const STORAGE_KEY = 'form-state';
@@ -22,7 +23,7 @@ function onFormSubmit(e) {
   // console.log(e.currentTarget.elements);
 
   if (email.value === '' || message.value === '') {
-    return alert('Please fill in all the fields!');
+    return Notify.warning('Please fill in all the fields!');
   }
 
   e.currentTarget.reset();

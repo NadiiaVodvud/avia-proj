@@ -56,4 +56,11 @@
   right: 11px;
   top: 11px;
   z-index: 1;
+  transition: color, box-shadow, $transitionDuration $transitionTiming;
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hoverShadow;
+    color: $primaryTextColor;
+    transition: color, box-shadow, $transitionDuration $transitionTiming;
+  }
 }

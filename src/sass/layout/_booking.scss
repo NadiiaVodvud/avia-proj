@@ -126,4 +126,11 @@
   color: $secondaryColor;
   box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
   margin-left: 430px;
+  transition: color, box-shadow, $transitionDuration $transitionTiming;
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hoverShadow;
+    color: $primaryTextColor;
+    transition: color, box-shadow, $transitionDuration $transitionTiming;
+  }
 }
