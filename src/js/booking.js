@@ -66,3 +66,7 @@ function onCheckInput(e) {
 //   }
 //   infoInputs.classList.add('visually-hidden');
 // });
+
+// const checkBoxesList = Array.from(checkBoxes);
+// checkBoxesList.map((item) => {});
+// const checkBoxesList = [...checkBoxes];
